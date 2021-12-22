@@ -1,3 +1,5 @@
 player1 0
 player2 5
 player3 10
+player4 15
+player5 20

@@ -8,40 +8,80 @@
 
 using namespace std;
 
+bool questionsload(string player);//prototipo de la fncion
+
+
+
 int main()
 {
-    ifstream arch; //inicializo archivo de preguntas
-    ifstream arch_points; //inicializo archivo de usuarios
-    string question = "", option_a = "", option_b = "", option_c = "", option_d = "", answer = "", answer_player="";
-    string player="", playerArch = "", name_arch = "";
-    int playerspoint=0, dec=0;
-    vector <string> text;
-    cout<<".___________________________________________."<<endl;
-    cout<<"|             Menu de eleccion              |"<<endl;
-    cout<<".-------------------------------------------."<<endl;
-    cout<<"|Para ser el jugador 1 presione 1 (1)       |"<<endl;
-    cout<<"|Para ser el jugador 2 presione 2 (2)       |"<<endl;
-    cout<<"|Para ser el jugador 3 presione 3 (3)       |"<<endl;
-    cout<<"|Para ser el jugador 3 presione 4 (4)       |"<<endl;
-    cout<<"|Para ser el jugador 3 presione 5 (5)       |"<<endl;
-    cout<<"|Para salir presione (0)                    |"<<endl;
-    cout<<"---------------------------------------------"<<endl;
-    cin>>dec;
-    cin.ignore();
+    int dec= 1;
+    string player= "";
+    bool conf = false;
 
-    if(dec == 1)// se le asigna el jugador que el usuario elige
+    while (dec !=0){
+        if(conf == false){
+        cout<<".___________________________________________."<<endl;
+        cout<<"|             Menu de eleccion              |"<<endl;
+        cout<<".-------------------------------------------."<<endl;
+        cout<<"|Para ser el jugador 1 presione 1 (1)       |"<<endl;
+        cout<<"|Para ser el jugador 2 presione 2 (2)       |"<<endl;
+        cout<<"|Para ser el jugador 3 presione 3 (3)       |"<<endl;
+        cout<<"|Para ser el jugador 3 presione 4 (4)       |"<<endl;
+        cout<<"|Para ser el jugador 3 presione 5 (5)       |"<<endl;
+        cout<<"|Para salir presione (0)                    |"<<endl;
+        cout<<"---------------------------------------------"<<endl;
+
+        cin>>dec;
+    }
+
+    switch (dec) {
+    case 1:{
+        cout<<"ejecutando caso 1---"<<endl;
         player="player1";
-    else if (dec==2)
+        conf= questionsload(player);
+        break;}
+    case 2:{
+        cout<<"ejecutando caso 2---"<<endl;
         player="player2";
-    else if (dec==3)
-        player="player3";
-    else if (dec==4)
-        player="player4";
-    else if (dec==5)
-        player="player5";
+        conf= questionsload(player);
 
+        break;}
+
+    case 3:{
+        cout<<"ejecutando caso 3---"<<endl;
+        player="player3";
+        conf= questionsload(player);
+        break;}
+
+    case 4:{
+        cout<<"ejecutando caso 4---"<<endl;
+        player="player4";
+        conf= questionsload(player);
+        break;}
+    case 5:{
+        cout<<"ejecutando caso 5---"<<endl;
+        player="player5";
+        conf= questionsload(player);
+        break;}
+
+    default :{
+        break;}
+    }
+    }
+
+
+
+    return 0;
+}
+
+bool questionsload(string player){
     srand(time(NULL));//elijo un numero aleatorio, se usara para obtener pregunta aleatoria
-    int num1=rand()%5, num2=0;
+    int num1=rand()%5, num2=0, playerspoint=0;
+    ifstream arch_points, arch;
+    string playerArch = "", name_arch = "";
+    string question = "", option_a = "", option_b = "", option_c = "", option_d = "", answer = "", answer_player="";
+    vector <string> text;
+    bool conf=false;
 
     cout<<"pregunta numero: "<<num1+1<<endl;
 
@@ -73,6 +113,7 @@ int main()
         }
     }
 
+
     if (playerspoint < 5){ // se le informa al usuario en que nivel esta
         cout<<"usted esta en el nivel 1";
         name_arch = "level1.txt"; // adquiero el jugador y su puntaje, y  se abre el archivo de preguntas correpondiente
@@ -99,29 +140,6 @@ int main()
         arch.open(name_arch);
     }
     cout<<endl<<endl;
-
-
-
-//    if(playerspoint == 0){ // adquiero el jugador y su puntaje, y  se abre el archivo de preguntas correpondiente
-//        name_arch = "level1.txt";
-//        arch.open(name_arch);
-//    }
-//    else if(playerspoint == 5){
-//        name_arch = "level2.txt";
-//        arch.open(name_arch);
-//    }
-//    else if(playerspoint == 10){
-//        name_arch = "level3.txt";
-//        arch.open(name_arch);
-//    }
-//    else if(playerspoint == 15){
-//        name_arch = "level4.txt";
-//        arch.open(name_arch);
-//    }
-//    else if(playerspoint == 20){
-//        name_arch = "level5.txt";
-//        arch.open(name_arch);
-//    }
 
     if(!arch){
         cout<<"No fue posible abrir el archivo: "<<name_arch<<endl;
@@ -154,7 +172,7 @@ int main()
                     cout<<text[i]<<endl;
                 }
 
-                cout<<"seleccione una opcion: ";
+                cout<<"seleccione una opcion o 0 para salir: ";
                 cin>>answer_player;
                 cin.ignore();
 
@@ -162,31 +180,31 @@ int main()
                 if (answer == answer_player){
                     system("cls");
                     cout<<"Acertaste la respuesta!, FELICIDADES."<<endl;
+                    conf=true;
+                }
+                else if(answer_player == "0"){
+                    return conf =false;
                 }
                 else{
                     system("cls");
                     cout<<"Respuesta incorrecta"<<endl;
+                    conf = false;
                 }
                 text.clear();
             }
             else{
                 getline(arch, question,'\n');
-
                 getline(arch, option_a,'\n');
-
                 getline(arch, option_b,'\n');
-
                 getline(arch, option_c,'\n');
-
                 getline(arch, option_d,'\n');
-
                 getline(arch, answer,'\n');
-
             }
             num2+=6;
         }
     }
     arch_points.close();
     arch.close();
-    return 0;
+    return conf;
+
 }

@@ -1,15 +1,30 @@
-nivel 1
-hola cmdfimg dfg
-a)gfgu
-b)fhgfbg
-c)rrlgmdf fdgh
-d)dflkdkfd fkmg
+Una masa de kilogramo, ¿a que peso equivale en newton?
+a)7.2N.
+b)9.8N.
+c)6.3N.
+d)5.8N.
 b
-nivel 2
-ludfgkkgegrg byy
-a)hgjf b
-b)hjfddfhn
-c)hhbbjj
-d)jnfghbnhbgf
-c
+Quien origino esta frase?: "Dadme un punto de apoyo y movere el mundo"
+a)Arquimedes.
+b)Aristoteles.
+c)Socrates.
+d)Democrito.
+a
+Cual de estas velocidades corresponde a los movimientos circulares?
+a)Velocidad media.
+b)Velocidad de trayectoria.
+c)Velocidad lineal.
+d)Velocidad angular.
+d
+Cual de las siguientes leyes no pertenece a los 3 principios de Newton?
+a)Ley fundamental de la dinamica
+b)Ley de atraccion.
+c)Ley de la accion y reaccion.
+d)Ley de la inercia.
+b
+La energia mecánica es la suma de dos energias, ¿cuales son?
+a)Energia cinetica y energia de rozamiento.
+b)Energia cinetica y energia potencial gravitatoria.
+c)Energia cinetica y energia electrica.
+d)Energia cinetica y energia hidraulica.
 end

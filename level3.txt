@@ -1,15 +1,31 @@
-nivel 1
-hola cmdfimg dfg
-a)gfgu
-b)fhgfbg
-c)rrlgmdf fdgh
-d)dflkdkfd fkmg
+En que pais se encuentra ubicada la Casa Rosada?
+a)Colombia
+b)Chile
+c)Mexico
+d)Argentina
+d
+En que continente se encuentra Surinam?
+a)Africa
+b)America del Sur
+c)Oceania
+d)Europa
 b
-nivel 2
-ludfgkkgegrg byy
-a)hgjf b
-b)hjfddfhn
-c)hhbbjj
-d)jnfghbnhbgf
-c
+Cual es la cascada mas alta del mundo?
+a) El Salto del Angel
+b) Cataratas de Iguazu
+c) Cataratas del Niaraga
+d) ninguna de las anteriores
+a
+Cual es el idioma mas antiguo que pervive en Europa?
+a)Vasco
+b)Ingles
+c)Frances
+d)Castellano
+a
+Cual es la obra mas importante de la literatura en espanol?
+a)El Principito
+b)Don Quijote de la Mancha
+c)Cien anos de soledad
+d)satanas
+b
 end

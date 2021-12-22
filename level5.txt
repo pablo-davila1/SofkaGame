@@ -1,15 +1,31 @@
-nivel 1
-hola cmdfimg dfg
-a)gfgu
-b)fhgfbg
-c)rrlgmdf fdgh
-d)dflkdkfd fkmg
+Que es un 'hacker'?
+a) Un delincuente informatico.
+b) Una persona estudiosa y experta en tecnologia.
+c) Un virus muy peligroso.
+d) Un programa que le roba su Facebook.
 b
-nivel 2
-ludfgkkgegrg byy
-a)hgjf b
-b)hjfddfhn
-c)hhbbjj
-d)jnfghbnhbgf
+Que es un 'malware'?
+a) Un codigo de 'software' con objetivo malicioso.
+b) Un 'hardware' en mal estado.
+c) Un virus de celular.
+d) Un trino de un politico en campana.
+a
+El 'internet de las cosas es':
+a) Todas las cosas que se consiguen en internet.
+b) La cosa que forma el corazon de internet.
+c) El internet que se usa en cualquier cosa.
+d) La posibilidad de que cualquier cosa se conecte a internet.
+d
+La RAM es:
+a) La capacidad de almacenamiento de PC.
+b) La cantidad de fotos y canciones que le caben a un celular, PC o tableta.
+c) El chip que ayuda al procesador a tener datos y varias 'apps' al tiempo.
+d) Rama de la tecnologia que estudia el 'hardware'.
 c
-end
+'Big data' se conoce como:
+a) La gran cantidad de datos que hay en un computador.
+b) Tecnologia avanzada que data de mucho tiempo atras.
+c) Gran cumulo de informacion que se produce y existe en internet.
+d) Es un supercomputador japones.
+c
+
