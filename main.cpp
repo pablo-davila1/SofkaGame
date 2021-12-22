@@ -20,8 +20,10 @@ int main()
     cout<<"|             Menu de eleccion              |"<<endl;
     cout<<".-------------------------------------------."<<endl;
     cout<<"|Para ser el jugador 1 presione 1 (1)       |"<<endl;
-    cout<<"|Para ser el jugador 2 presione 2 (1)       |"<<endl;
+    cout<<"|Para ser el jugador 2 presione 2 (2)       |"<<endl;
     cout<<"|Para ser el jugador 3 presione 3 (3)       |"<<endl;
+    cout<<"|Para ser el jugador 3 presione 4 (4)       |"<<endl;
+    cout<<"|Para ser el jugador 3 presione 5 (5)       |"<<endl;
     cout<<"|Para salir presione (0)                    |"<<endl;
     cout<<"---------------------------------------------"<<endl;
     cin>>dec;
@@ -33,6 +35,10 @@ int main()
         player="player2";
     else if (dec==3)
         player="player3";
+    else if (dec==4)
+        player="player4";
+    else if (dec==5)
+        player="player5";
 
     srand(time(NULL));//elijo un numero aleatorio, se usara para obtener pregunta aleatoria
     int num1=rand()%5, num2=0;
@@ -67,32 +73,55 @@ int main()
         }
     }
 
-    if (playerspoint < 5) // se le informa al usuario en que nivel esta
+    if (playerspoint < 5){ // se le informa al usuario en que nivel esta
         cout<<"usted esta en el nivel 1";
-    else if (playerspoint >= 5 && playerspoint < 10)
+        name_arch = "level1.txt"; // adquiero el jugador y su puntaje, y  se abre el archivo de preguntas correpondiente
+        arch.open(name_arch);
+    }
+    else if (playerspoint >= 5 && playerspoint < 10){
         cout<<"usted esta en el nivel 2";
-    else if (playerspoint >= 10 && playerspoint < 15)
+        name_arch = "level2.txt";
+        arch.open(name_arch);
+    }
+    else if (playerspoint >= 10 && playerspoint < 15){
         cout<<"usted esta en el nivel 3";
-    else if (playerspoint >= 15 && playerspoint < 20)
+        name_arch = "level3.txt";
+        arch.open(name_arch);
+    }
+    else if (playerspoint >= 15 && playerspoint < 20){
         cout<<"usted esta en el nivel 4";
-    else if (playerspoint > 19 )
+        name_arch = "level4.txt";
+        arch.open(name_arch);
+    }
+    else if (playerspoint > 19 ){
         cout<<"usted esta en el nivel 5";
+        name_arch = "level5.txt";
+        arch.open(name_arch);
+    }
     cout<<endl<<endl;
 
 
 
-    if(playerspoint == 0){ // adquiero el jugador y su puntaje, y  se abre el archivo de preguntas correpondiente
-        name_arch = "level1.txt";
-        arch.open(name_arch);
-    }
-    else if(playerspoint == 5){
-        name_arch = "level2.txt";
-        arch.open(name_arch);
-    }
-    else if(playerspoint == 10){
-        name_arch = "level3.txt";
-        arch.open(name_arch);
-    }
+//    if(playerspoint == 0){ // adquiero el jugador y su puntaje, y  se abre el archivo de preguntas correpondiente
+//        name_arch = "level1.txt";
+//        arch.open(name_arch);
+//    }
+//    else if(playerspoint == 5){
+//        name_arch = "level2.txt";
+//        arch.open(name_arch);
+//    }
+//    else if(playerspoint == 10){
+//        name_arch = "level3.txt";
+//        arch.open(name_arch);
+//    }
+//    else if(playerspoint == 15){
+//        name_arch = "level4.txt";
+//        arch.open(name_arch);
+//    }
+//    else if(playerspoint == 20){
+//        name_arch = "level5.txt";
+//        arch.open(name_arch);
+//    }
 
     if(!arch){
         cout<<"No fue posible abrir el archivo: "<<name_arch<<endl;
@@ -142,31 +171,21 @@ int main()
             }
             else{
                 getline(arch, question,'\n');
-                if(question == "end")
-                    break;
-
-                //text.push_back(question);
 
                 getline(arch, option_a,'\n');
-                //text.push_back(option_a);
 
                 getline(arch, option_b,'\n');
-                //text.push_back(option_b);
 
                 getline(arch, option_c,'\n');
-                //text.push_back(option_c);
 
                 getline(arch, option_d,'\n');
-                //text.push_back(option_d);
 
                 getline(arch, answer,'\n');
 
             }
             num2+=6;
-
         }
     }
-
     arch_points.close();
     arch.close();
     return 0;
