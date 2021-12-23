@@ -5,18 +5,19 @@
 #include <vector>
 #include <stdlib.h>
 #include <time.h>
+#include <addpoint.h>
 
 using namespace std;
 
 bool questionsload(string player);//prototipo de la fncion
-
-
 
 int main()
 {
     int dec= 1;
     string player= "";
     bool conf = false;
+
+    addpoint ADD(player);
 
     while (dec !=0){
         if(conf == false){
@@ -36,32 +37,42 @@ int main()
 
     switch (dec) {
     case 1:{
-        cout<<"ejecutando caso 1---"<<endl;
         player="player1";
         conf= questionsload(player);
+        if (conf == true){
+            ADD.pluspoint(player);
+        }
         break;}
     case 2:{
-        cout<<"ejecutando caso 2---"<<endl;
         player="player2";
         conf= questionsload(player);
+        if (conf == true){
+            ADD.pluspoint(player);
+        }
 
         break;}
 
     case 3:{
-        cout<<"ejecutando caso 3---"<<endl;
         player="player3";
         conf= questionsload(player);
+        if (conf == true){
+            ADD.pluspoint(player);
+        }
         break;}
 
     case 4:{
-        cout<<"ejecutando caso 4---"<<endl;
         player="player4";
         conf= questionsload(player);
+        if (conf == true){
+            ADD.pluspoint(player);
+        }
         break;}
     case 5:{
-        cout<<"ejecutando caso 5---"<<endl;
         player="player5";
         conf= questionsload(player);
+        if (conf == true){
+            ADD.pluspoint(player);
+        }
         break;}
 
     default :{
@@ -74,7 +85,7 @@ int main()
     return 0;
 }
 
-bool questionsload(string player){
+bool questionsload(string player){  //Esta funcion abre el archivo, lee las preguntas y recibe una respuesta del usuario
     srand(time(NULL));//elijo un numero aleatorio, se usara para obtener pregunta aleatoria
     int num1=rand()%5, num2=0, playerspoint=0;
     ifstream arch_points, arch;
@@ -83,7 +94,6 @@ bool questionsload(string player){
     vector <string> text;
     bool conf=false;
 
-    cout<<"pregunta numero: "<<num1+1<<endl;
 
     if (num1 == 0)
         num1 = 0;
@@ -179,16 +189,20 @@ bool questionsload(string player){
 
                 if (answer == answer_player){
                     system("cls");
-                    cout<<"Acertaste la respuesta!, FELICIDADES."<<endl;
+                    cout<<"Acertaste la respuesta!, FELICIDADES."<<endl<<endl;
                     conf=true;
+                    return conf;
                 }
                 else if(answer_player == "0"){
-                    return conf =false;
+                    conf =false;
+                    return conf;
                 }
                 else{
                     system("cls");
                     cout<<"Respuesta incorrecta"<<endl;
                     conf = false;
+                    return conf;
+
                 }
                 text.clear();
             }
