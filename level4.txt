@@ -1,4 +1,4 @@
-Una masa de kilogramo, ¿a que peso equivale en newton?
+Una masa de kilogramo, a que peso equivale en newton?
 a)7.2N.
 b)9.8N.
 c)6.3N.
@@ -22,7 +22,7 @@ b)Ley de atraccion.
 c)Ley de la accion y reaccion.
 d)Ley de la inercia.
 b
-La energia mecánica es la suma de dos energias, ¿cuales son?
+La energia mecánica es la suma de dos energias, cuales son?
 a)Energia cinetica y energia de rozamiento.
 b)Energia cinetica y energia potencial gravitatoria.
 c)Energia cinetica y energia electrica.
