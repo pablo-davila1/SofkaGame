@@ -27,8 +27,8 @@ int main()
         cout<<"|Para ser el jugador 1 presione 1 (1)       |"<<endl;
         cout<<"|Para ser el jugador 2 presione 2 (2)       |"<<endl;
         cout<<"|Para ser el jugador 3 presione 3 (3)       |"<<endl;
-        cout<<"|Para ser el jugador 3 presione 4 (4)       |"<<endl;
-        cout<<"|Para ser el jugador 3 presione 5 (5)       |"<<endl;
+        cout<<"|Para ser el jugador 4 presione 4 (4)       |"<<endl;
+        cout<<"|Para ser el jugador 5 presione 5 (5)       |"<<endl;
         cout<<"|Para salir presione (0)                    |"<<endl;
         cout<<"---------------------------------------------"<<endl;
 
